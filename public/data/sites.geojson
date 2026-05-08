@@ -1,0 +1,205 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0001",
+        "road_section": "Luwero - Nakasongola",
+        "region": "National",
+        "functional_class": "Highway",
+        "aadt_2025": 16371,
+        "predicted_aadt_2030": 19329,
+        "congestion_index": 0.6615729678966464,
+        "current_speed_kmh": 58
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.503798,
+          0.818018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0002",
+        "road_section": "Kampala - Mukono",
+        "region": "Central",
+        "functional_class": "Collector",
+        "aadt_2025": 1116,
+        "predicted_aadt_2030": 1444,
+        "congestion_index": 0.6132374269006114,
+        "current_speed_kmh": 53
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.73805,
+          0.3687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0003",
+        "road_section": "Iganga - Nakalama",
+        "region": "National",
+        "functional_class": "Arterial",
+        "aadt_2025": 10455,
+        "predicted_aadt_2030": 14349,
+        "congestion_index": 0.6253269835008559,
+        "current_speed_kmh": 51
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5143,
+          0.62756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0004",
+        "road_section": "Buwama - Lukaya",
+        "region": "National",
+        "functional_class": "Arterial",
+        "aadt_2025": 8267,
+        "predicted_aadt_2030": 11968,
+        "congestion_index": 0.6059404470600012,
+        "current_speed_kmh": 72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.05515,
+          0.01665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0005",
+        "road_section": "Ishaka - Kizinda - Rugazi",
+        "region": "National",
+        "functional_class": "Highway",
+        "aadt_2025": 18304,
+        "predicted_aadt_2030": 21889,
+        "congestion_index": 0.3213110721375725,
+        "current_speed_kmh": 80
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1236,
+          -0.52679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0006",
+        "road_section": "Kayunga - Kangulumira",
+        "region": "National",
+        "functional_class": "Arterial",
+        "aadt_2025": 1652,
+        "predicted_aadt_2030": 2198,
+        "congestion_index": 0.7474337298281574,
+        "current_speed_kmh": 28
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.92356,
+          0.68051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0007",
+        "road_section": "Kamdini - Minakulu",
+        "region": "National",
+        "functional_class": "Collector",
+        "aadt_2025": 6677,
+        "predicted_aadt_2030": 8409,
+        "congestion_index": 0.6470248249382864,
+        "current_speed_kmh": 44
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.34248,
+          2.25441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0008",
+        "road_section": "Pakwachi - Nebbi",
+        "region": "National",
+        "functional_class": "Highway",
+        "aadt_2025": 6436,
+        "predicted_aadt_2030": 8210,
+        "congestion_index": 0.6060836308671116,
+        "current_speed_kmh": 93
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.24403,
+          2.42511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U0009",
+        "road_section": "Kampala - Mityana",
+        "region": "Central",
+        "functional_class": "Collector",
+        "aadt_2025": 4843,
+        "predicted_aadt_2030": 5917,
+        "congestion_index": 0.12294393537434241,
+        "current_speed_kmh": 87
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.10109,
+          0.38527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_code": "U00010",
+        "road_section": "Zana - Kisubi (Entebbe Road)",
+        "region": "National",
+        "functional_class": "Arterial",
+        "aadt_2025": 9933,
+        "predicted_aadt_2030": 14894,
+        "congestion_index": 0.6691105126878676,
+        "current_speed_kmh": 66
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.52938,
+          0.1189
+        ]
+      }
+    }
+  ]
+}

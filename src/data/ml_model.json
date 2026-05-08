@@ -1,0 +1,67 @@
+{
+  "model_type": "GradientBoosting (GBRT) Ensemble",
+  "training_samples": 35910,
+  "r2_score": 0.9300207661405192,
+  "feature_importance": {
+    "hour": 0.37667375164906075,
+    "day_of_week": 0.013113413855824124,
+    "month": 0.007501232722011984,
+    "station": 0.602711601773103
+  },
+  "median_growth_rate": 0.04,
+  "class_proportions": {
+    "Motorcycles": 0.4086285558247028,
+    "Saloon Cars & Taxis": 0.18813712600847124,
+    "Light Goods": 0.13889225536023203,
+    "Small Buses": 0.12337559234980892,
+    "Medium Buses": 0.0013190601766553706,
+    "Large Buses": 0.005137405723887645,
+    "Light Trucks": 0.04929127681650106,
+    "Medium Trucks": 0.013313328823114005,
+    "Heavy Trucks": 0.015431776796302234,
+    "Truck Trailers 5ax": 0.010949682418173014,
+    "Truck Trailers 6ax": 0.04275516616987777,
+    "Truck Trailers 7ax": 0.002768773532273892
+  },
+  "prediction_horizon": "2025-2035",
+  "total_road_links": 1017,
+  "links_with_geometry": 1011,
+  "atc_stations": 10,
+  "tis_stations": 290,
+  "vehicle_classes": [
+    "Motorcycles",
+    "Saloon Cars & Taxis",
+    "Light Goods",
+    "Small Buses",
+    "Medium Buses",
+    "Large Buses",
+    "Light Trucks",
+    "Medium Trucks",
+    "Heavy Trucks",
+    "Truck Trailers 5ax",
+    "Truck Trailers 6ax",
+    "Truck Trailers 7ax"
+  ],
+  "network_summary": {
+    "total_links": 1017,
+    "by_class": {
+      "C": 775,
+      "A": 89,
+      "M": 78,
+      "B": 75
+    },
+    "by_surface": {
+      "Unsealed": 677,
+      "Bituminous": 340
+    },
+    "by_region": {
+      "Central": 322,
+      "Southern": 175,
+      "Eastern": 157,
+      "Northern": 157,
+      "Western": 112,
+      "North Eastern": 94
+    },
+    "total_length_km": 21102.7
+  }
+}

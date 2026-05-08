@@ -1,0 +1,1448 @@
+{
+  "stations": {
+    "U0001": {
+      "id": "U0001",
+      "name": "U0001",
+      "classes": {
+        "Motorcycles": 7466.9,
+        "Saloon Cars & Taxis": 2690.8,
+        "Light Goods": 2586.4,
+        "Small Buses": 1745.2,
+        "Medium Buses": 18.8,
+        "Large Buses": 99.4,
+        "Light Trucks": 938.0,
+        "Medium Trucks": 229.9,
+        "Heavy Trucks": 234.1,
+        "Truck Trailers 5ax": 87.4,
+        "Truck Trailers 6ax": 253.1,
+        "Truck Trailers 7ax": 44.1
+      },
+      "total_adt": 16394.1
+    },
+    "U0002": {
+      "id": "U0002",
+      "name": "U0002",
+      "classes": {
+        "Motorcycles": 9502.0,
+        "Saloon Cars & Taxis": 4120.6,
+        "Light Goods": 2740.7,
+        "Small Buses": 3415.0,
+        "Medium Buses": 44.4,
+        "Large Buses": 86.4,
+        "Light Trucks": 1508.4,
+        "Medium Trucks": 413.5,
+        "Heavy Trucks": 488.2,
+        "Truck Trailers 5ax": 358.0,
+        "Truck Trailers 6ax": 1425.6,
+        "Truck Trailers 7ax": 111.8
+      },
+      "total_adt": 24214.600000000002
+    },
+    "U0003": {
+      "id": "U0003",
+      "name": "U0003",
+      "classes": {
+        "Motorcycles": 4737.8,
+        "Saloon Cars & Taxis": 2447.1,
+        "Light Goods": 1609.0,
+        "Small Buses": 2538.2,
+        "Medium Buses": 19.2,
+        "Large Buses": 94.5,
+        "Light Trucks": 900.2,
+        "Medium Trucks": 233.9,
+        "Heavy Trucks": 313.1,
+        "Truck Trailers 5ax": 418.2,
+        "Truck Trailers 6ax": 2104.3,
+        "Truck Trailers 7ax": 44.5
+      },
+      "total_adt": 15460.0
+    },
+    "U0004": {
+      "id": "U0004",
+      "name": "U0004",
+      "classes": {
+        "Motorcycles": 1880.0,
+        "Saloon Cars & Taxis": 2514.5,
+        "Light Goods": 1901.0,
+        "Small Buses": 1587.9,
+        "Medium Buses": 16.3,
+        "Large Buses": 181.3,
+        "Light Trucks": 879.4,
+        "Medium Trucks": 229.1,
+        "Heavy Trucks": 530.3,
+        "Truck Trailers 5ax": 133.3,
+        "Truck Trailers 6ax": 596.8,
+        "Truck Trailers 7ax": 30.2
+      },
+      "total_adt": 10480.099999999999
+    },
+    "U0005": {
+      "id": "U0005",
+      "name": "U0005",
+      "classes": {
+        "Motorcycles": 5929.0,
+        "Saloon Cars & Taxis": 1010.4,
+        "Light Goods": 622.3,
+        "Small Buses": 284.7,
+        "Medium Buses": 3.0,
+        "Large Buses": 14.1,
+        "Light Trucks": 180.6,
+        "Medium Trucks": 35.4,
+        "Heavy Trucks": 25.8,
+        "Truck Trailers 5ax": 27.5,
+        "Truck Trailers 6ax": 105.1,
+        "Truck Trailers 7ax": 9.5
+      },
+      "total_adt": 8247.4
+    },
+    "U0006": {
+      "id": "U0006",
+      "name": "U0006",
+      "classes": {
+        "Motorcycles": 6765.0,
+        "Saloon Cars & Taxis": 1189.4,
+        "Light Goods": 1152.8,
+        "Small Buses": 736.7,
+        "Medium Buses": 6.0,
+        "Large Buses": 9.6,
+        "Light Trucks": 244.6,
+        "Medium Trucks": 206.9,
+        "Heavy Trucks": 37.8,
+        "Truck Trailers 5ax": 18.6,
+        "Truck Trailers 6ax": 28.0,
+        "Truck Trailers 7ax": 0.9
+      },
+      "total_adt": 10396.3
+    },
+    "U0007": {
+      "id": "U0007",
+      "name": "U0007",
+      "classes": {
+        "Motorcycles": 2470.5,
+        "Saloon Cars & Taxis": 529.2,
+        "Light Goods": 561.5,
+        "Small Buses": 145.9,
+        "Medium Buses": 3.7,
+        "Large Buses": 52.5,
+        "Light Trucks": 215.0,
+        "Medium Trucks": 43.8,
+        "Heavy Trucks": 33.6,
+        "Truck Trailers 5ax": 134.1,
+        "Truck Trailers 6ax": 324.6,
+        "Truck Trailers 7ax": 27.0
+      },
+      "total_adt": 4541.400000000001
+    },
+    "U0008": {
+      "id": "U0008",
+      "name": "U0008",
+      "classes": {
+        "Motorcycles": 744.2,
+        "Saloon Cars & Taxis": 211.8,
+        "Light Goods": 245.0,
+        "Small Buses": 108.6,
+        "Medium Buses": 1.8,
+        "Large Buses": 55.3,
+        "Light Trucks": 169.7,
+        "Medium Trucks": 45.3,
+        "Heavy Trucks": 54.5,
+        "Truck Trailers 5ax": 49.6,
+        "Truck Trailers 6ax": 276.4,
+        "Truck Trailers 7ax": 39.2
+      },
+      "total_adt": 2001.3999999999999
+    },
+    "U0009": {
+      "id": "U0009",
+      "name": "U0009",
+      "classes": {
+        "Motorcycles": 3579.1,
+        "Saloon Cars & Taxis": 1770.6,
+        "Light Goods": 1500.8,
+        "Small Buses": 1327.6,
+        "Medium Buses": 10.7,
+        "Large Buses": 39.2,
+        "Light Trucks": 657.1,
+        "Medium Trucks": 103.4,
+        "Heavy Trucks": 89.6,
+        "Truck Trailers 5ax": 54.3,
+        "Truck Trailers 6ax": 188.0,
+        "Truck Trailers 7ax": 11.6
+      },
+      "total_adt": 9332.0
+    },
+    "U0010": {
+      "id": "U0010",
+      "name": "U0010",
+      "classes": {
+        "Motorcycles": 7388.5,
+        "Saloon Cars & Taxis": 6929.8,
+        "Light Goods": 4390.1,
+        "Small Buses": 3456.4,
+        "Medium Buses": 32.5,
+        "Large Buses": 33.8,
+        "Light Trucks": 496.4,
+        "Medium Trucks": 71.5,
+        "Heavy Trucks": 91.4,
+        "Truck Trailers 5ax": 12.7,
+        "Truck Trailers 6ax": 39.7,
+        "Truck Trailers 7ax": 1.9
+      },
+      "total_adt": 22944.700000000008
+    }
+  },
+  "charts": [
+    {
+      "id": "chart_U0001",
+      "title": "ADT per Vehicle Class: U0001",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 7466.9
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 2690.8
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 2586.4
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 1745.2
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 18.8
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 99.4
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 938.0
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 229.9
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 234.1
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 87.4
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 253.1
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 44.1
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0002",
+      "title": "ADT per Vehicle Class: U0002",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 9502.0
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 4120.6
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 2740.7
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 3415.0
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 44.4
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 86.4
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 1508.4
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 413.5
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 488.2
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 358.0
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 1425.6
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 111.8
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0003",
+      "title": "ADT per Vehicle Class: U0003",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 4737.8
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 2447.1
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 1609.0
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 2538.2
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 19.2
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 94.5
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 900.2
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 233.9
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 313.1
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 418.2
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 2104.3
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 44.5
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0004",
+      "title": "ADT per Vehicle Class: U0004",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 1880.0
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 2514.5
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 1901.0
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 1587.9
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 16.3
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 181.3
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 879.4
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 229.1
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 530.3
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 133.3
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 596.8
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 30.2
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0005",
+      "title": "ADT per Vehicle Class: U0005",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 5929.0
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 1010.4
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 622.3
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 284.7
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 3.0
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 14.1
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 180.6
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 35.4
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 25.8
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 27.5
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 105.1
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 9.5
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0006",
+      "title": "ADT per Vehicle Class: U0006",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 6765.0
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 1189.4
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 1152.8
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 736.7
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 6.0
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 9.6
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 244.6
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 206.9
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 37.8
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 18.6
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 28.0
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 0.9
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0007",
+      "title": "ADT per Vehicle Class: U0007",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 2470.5
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 529.2
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 561.5
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 145.9
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 3.7
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 52.5
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 215.0
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 43.8
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 33.6
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 134.1
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 324.6
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 27.0
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0008",
+      "title": "ADT per Vehicle Class: U0008",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 744.2
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 211.8
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 245.0
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 108.6
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 1.8
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 55.3
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 169.7
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 45.3
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 54.5
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 49.6
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 276.4
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 39.2
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0009",
+      "title": "ADT per Vehicle Class: U0009",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 3579.1
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 1770.6
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 1500.8
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 1327.6
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 10.7
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 39.2
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 657.1
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 103.4
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 89.6
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 54.3
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 188.0
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 11.6
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_U0010",
+      "title": "ADT per Vehicle Class: U0010",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "ADT": 7388.5
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "ADT": 6929.8
+        },
+        {
+          "name": "Light Goods",
+          "ADT": 4390.1
+        },
+        {
+          "name": "Small Buses",
+          "ADT": 3456.4
+        },
+        {
+          "name": "Medium Buses",
+          "ADT": 32.5
+        },
+        {
+          "name": "Large Buses",
+          "ADT": 33.8
+        },
+        {
+          "name": "Light Trucks",
+          "ADT": 496.4
+        },
+        {
+          "name": "Medium Trucks",
+          "ADT": 71.5
+        },
+        {
+          "name": "Heavy Trucks",
+          "ADT": 91.4
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "ADT": 12.7
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "ADT": 39.7
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "ADT": 1.9
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_overall_classes",
+      "title": "Overall ADT per Vehicle Class (All Stations)",
+      "type": "bar",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "Total ADT": 50463.0
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "Total ADT": 23414.1
+        },
+        {
+          "name": "Light Goods",
+          "Total ADT": 17309.6
+        },
+        {
+          "name": "Small Buses",
+          "Total ADT": 15346.4
+        },
+        {
+          "name": "Light Trucks",
+          "Total ADT": 6189.3
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "Total ADT": 5341.5
+        },
+        {
+          "name": "Heavy Trucks",
+          "Total ADT": 1898.5
+        },
+        {
+          "name": "Medium Trucks",
+          "Total ADT": 1612.8
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "Total ADT": 1293.9
+        },
+        {
+          "name": "Large Buses",
+          "Total ADT": 666.1
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "Total ADT": 320.6
+        },
+        {
+          "name": "Medium Buses",
+          "Total ADT": 156.4
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Total ADT"
+    },
+    {
+      "id": "chart_station_totals",
+      "title": "Total ADT Comparison Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0002",
+          "ADT": 24214.6
+        },
+        {
+          "name": "U0010",
+          "ADT": 22944.7
+        },
+        {
+          "name": "U0001",
+          "ADT": 16394.1
+        },
+        {
+          "name": "U0003",
+          "ADT": 15460.0
+        },
+        {
+          "name": "U0004",
+          "ADT": 10480.1
+        },
+        {
+          "name": "U0006",
+          "ADT": 10396.3
+        },
+        {
+          "name": "U0009",
+          "ADT": 9332.0
+        },
+        {
+          "name": "U0005",
+          "ADT": 8247.4
+        },
+        {
+          "name": "U0007",
+          "ADT": 4541.4
+        },
+        {
+          "name": "U0008",
+          "ADT": 2001.4
+        }
+      ],
+      "xKey": "name",
+      "yKey": "ADT"
+    },
+    {
+      "id": "chart_comparison_0",
+      "title": "Motorcycles Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0002",
+          "Volume": 9502.0
+        },
+        {
+          "name": "U0001",
+          "Volume": 7466.9
+        },
+        {
+          "name": "U0010",
+          "Volume": 7388.5
+        },
+        {
+          "name": "U0006",
+          "Volume": 6765.0
+        },
+        {
+          "name": "U0005",
+          "Volume": 5929.0
+        },
+        {
+          "name": "U0003",
+          "Volume": 4737.8
+        },
+        {
+          "name": "U0009",
+          "Volume": 3579.1
+        },
+        {
+          "name": "U0007",
+          "Volume": 2470.5
+        },
+        {
+          "name": "U0004",
+          "Volume": 1880.0
+        },
+        {
+          "name": "U0008",
+          "Volume": 744.2
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_comparison_1",
+      "title": "Saloon Cars & Taxis Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0010",
+          "Volume": 6929.8
+        },
+        {
+          "name": "U0002",
+          "Volume": 4120.6
+        },
+        {
+          "name": "U0001",
+          "Volume": 2690.8
+        },
+        {
+          "name": "U0004",
+          "Volume": 2514.5
+        },
+        {
+          "name": "U0003",
+          "Volume": 2447.1
+        },
+        {
+          "name": "U0009",
+          "Volume": 1770.6
+        },
+        {
+          "name": "U0006",
+          "Volume": 1189.4
+        },
+        {
+          "name": "U0005",
+          "Volume": 1010.4
+        },
+        {
+          "name": "U0007",
+          "Volume": 529.2
+        },
+        {
+          "name": "U0008",
+          "Volume": 211.8
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_comparison_2",
+      "title": "Light Goods Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0010",
+          "Volume": 4390.1
+        },
+        {
+          "name": "U0002",
+          "Volume": 2740.7
+        },
+        {
+          "name": "U0001",
+          "Volume": 2586.4
+        },
+        {
+          "name": "U0004",
+          "Volume": 1901.0
+        },
+        {
+          "name": "U0003",
+          "Volume": 1609.0
+        },
+        {
+          "name": "U0009",
+          "Volume": 1500.8
+        },
+        {
+          "name": "U0006",
+          "Volume": 1152.8
+        },
+        {
+          "name": "U0005",
+          "Volume": 622.3
+        },
+        {
+          "name": "U0007",
+          "Volume": 561.5
+        },
+        {
+          "name": "U0008",
+          "Volume": 245.0
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_comparison_3",
+      "title": "Light Trucks Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0002",
+          "Volume": 1508.4
+        },
+        {
+          "name": "U0001",
+          "Volume": 938.0
+        },
+        {
+          "name": "U0003",
+          "Volume": 900.2
+        },
+        {
+          "name": "U0004",
+          "Volume": 879.4
+        },
+        {
+          "name": "U0009",
+          "Volume": 657.1
+        },
+        {
+          "name": "U0010",
+          "Volume": 496.4
+        },
+        {
+          "name": "U0006",
+          "Volume": 244.6
+        },
+        {
+          "name": "U0007",
+          "Volume": 215.0
+        },
+        {
+          "name": "U0005",
+          "Volume": 180.6
+        },
+        {
+          "name": "U0008",
+          "Volume": 169.7
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_comparison_4",
+      "title": "Medium Trucks Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0002",
+          "Volume": 413.5
+        },
+        {
+          "name": "U0003",
+          "Volume": 233.9
+        },
+        {
+          "name": "U0001",
+          "Volume": 229.9
+        },
+        {
+          "name": "U0004",
+          "Volume": 229.1
+        },
+        {
+          "name": "U0006",
+          "Volume": 206.9
+        },
+        {
+          "name": "U0009",
+          "Volume": 103.4
+        },
+        {
+          "name": "U0010",
+          "Volume": 71.5
+        },
+        {
+          "name": "U0008",
+          "Volume": 45.3
+        },
+        {
+          "name": "U0007",
+          "Volume": 43.8
+        },
+        {
+          "name": "U0005",
+          "Volume": 35.4
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_comparison_5",
+      "title": "Heavy Trucks Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0004",
+          "Volume": 530.3
+        },
+        {
+          "name": "U0002",
+          "Volume": 488.2
+        },
+        {
+          "name": "U0003",
+          "Volume": 313.1
+        },
+        {
+          "name": "U0001",
+          "Volume": 234.1
+        },
+        {
+          "name": "U0010",
+          "Volume": 91.4
+        },
+        {
+          "name": "U0009",
+          "Volume": 89.6
+        },
+        {
+          "name": "U0008",
+          "Volume": 54.5
+        },
+        {
+          "name": "U0006",
+          "Volume": 37.8
+        },
+        {
+          "name": "U0007",
+          "Volume": 33.6
+        },
+        {
+          "name": "U0005",
+          "Volume": 25.8
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_comparison_6",
+      "title": "Truck Trailers 6ax Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0003",
+          "Volume": 2104.3
+        },
+        {
+          "name": "U0002",
+          "Volume": 1425.6
+        },
+        {
+          "name": "U0004",
+          "Volume": 596.8
+        },
+        {
+          "name": "U0007",
+          "Volume": 324.6
+        },
+        {
+          "name": "U0008",
+          "Volume": 276.4
+        },
+        {
+          "name": "U0001",
+          "Volume": 253.1
+        },
+        {
+          "name": "U0009",
+          "Volume": 188.0
+        },
+        {
+          "name": "U0005",
+          "Volume": 105.1
+        },
+        {
+          "name": "U0010",
+          "Volume": 39.7
+        },
+        {
+          "name": "U0006",
+          "Volume": 28.0
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_comparison_7",
+      "title": "Small Buses Distribution Across Stations",
+      "type": "bar",
+      "data": [
+        {
+          "name": "U0010",
+          "Volume": 3456.4
+        },
+        {
+          "name": "U0002",
+          "Volume": 3415.0
+        },
+        {
+          "name": "U0003",
+          "Volume": 2538.2
+        },
+        {
+          "name": "U0001",
+          "Volume": 1745.2
+        },
+        {
+          "name": "U0004",
+          "Volume": 1587.9
+        },
+        {
+          "name": "U0009",
+          "Volume": 1327.6
+        },
+        {
+          "name": "U0006",
+          "Volume": 736.7
+        },
+        {
+          "name": "U0005",
+          "Volume": 284.7
+        },
+        {
+          "name": "U0007",
+          "Volume": 145.9
+        },
+        {
+          "name": "U0008",
+          "Volume": 108.6
+        }
+      ],
+      "xKey": "name",
+      "yKey": "Volume"
+    },
+    {
+      "id": "chart_hourly_profile",
+      "title": "Hourly Traffic Profile (Heavy vs Light)",
+      "type": "line",
+      "data": [
+        {
+          "hour": "01:00",
+          "Heavy Vehicles": 86464.0,
+          "Light Vehicles": 193882.0
+        },
+        {
+          "hour": "02:00",
+          "Heavy Vehicles": 79275.0,
+          "Light Vehicles": 130616.0
+        },
+        {
+          "hour": "03:00",
+          "Heavy Vehicles": 70999.0,
+          "Light Vehicles": 91522.0
+        },
+        {
+          "hour": "04:00",
+          "Heavy Vehicles": 67938.0,
+          "Light Vehicles": 75161.0
+        },
+        {
+          "hour": "05:00",
+          "Heavy Vehicles": 72535.0,
+          "Light Vehicles": 86100.0
+        },
+        {
+          "hour": "06:00",
+          "Heavy Vehicles": 77033.0,
+          "Light Vehicles": 149015.0
+        },
+        {
+          "hour": "07:00",
+          "Heavy Vehicles": 80318.0,
+          "Light Vehicles": 328012.0
+        },
+        {
+          "hour": "08:00",
+          "Heavy Vehicles": 84096.0,
+          "Light Vehicles": 618162.0
+        },
+        {
+          "hour": "09:00",
+          "Heavy Vehicles": 80659.0,
+          "Light Vehicles": 738153.0
+        },
+        {
+          "hour": "10:00",
+          "Heavy Vehicles": 78776.0,
+          "Light Vehicles": 772207.0
+        },
+        {
+          "hour": "11:00",
+          "Heavy Vehicles": 81658.0,
+          "Light Vehicles": 799154.0
+        },
+        {
+          "hour": "12:00",
+          "Heavy Vehicles": 86528.0,
+          "Light Vehicles": 807493.0
+        },
+        {
+          "hour": "13:00",
+          "Heavy Vehicles": 92656.0,
+          "Light Vehicles": 798483.0
+        },
+        {
+          "hour": "14:00",
+          "Heavy Vehicles": 97183.0,
+          "Light Vehicles": 785094.0
+        },
+        {
+          "hour": "15:00",
+          "Heavy Vehicles": 101246.0,
+          "Light Vehicles": 775527.0
+        },
+        {
+          "hour": "16:00",
+          "Heavy Vehicles": 105567.0,
+          "Light Vehicles": 785749.0
+        },
+        {
+          "hour": "17:00",
+          "Heavy Vehicles": 109873.0,
+          "Light Vehicles": 815262.0
+        },
+        {
+          "hour": "18:00",
+          "Heavy Vehicles": 114658.0,
+          "Light Vehicles": 854854.0
+        },
+        {
+          "hour": "19:00",
+          "Heavy Vehicles": 190662.0,
+          "Light Vehicles": 1091720.0
+        },
+        {
+          "hour": "20:00",
+          "Heavy Vehicles": 108380.0,
+          "Light Vehicles": 813352.0
+        },
+        {
+          "hour": "21:00",
+          "Heavy Vehicles": 106052.0,
+          "Light Vehicles": 684460.0
+        },
+        {
+          "hour": "22:00",
+          "Heavy Vehicles": 103948.0,
+          "Light Vehicles": 546579.0
+        },
+        {
+          "hour": "23:00",
+          "Heavy Vehicles": 98189.0,
+          "Light Vehicles": 415058.0
+        }
+      ],
+      "xKey": "hour",
+      "yKeys": [
+        "Heavy Vehicles",
+        "Light Vehicles"
+      ]
+    },
+    {
+      "id": "chart_overall_pie",
+      "title": "Vehicle Class Share (%)",
+      "type": "pie",
+      "data": [
+        {
+          "name": "Motorcycles",
+          "Total ADT": 50463.0
+        },
+        {
+          "name": "Saloon Cars & Taxis",
+          "Total ADT": 23414.1
+        },
+        {
+          "name": "Light Goods",
+          "Total ADT": 17309.6
+        },
+        {
+          "name": "Small Buses",
+          "Total ADT": 15346.4
+        },
+        {
+          "name": "Medium Buses",
+          "Total ADT": 156.4
+        },
+        {
+          "name": "Large Buses",
+          "Total ADT": 666.1
+        },
+        {
+          "name": "Light Trucks",
+          "Total ADT": 6189.3
+        },
+        {
+          "name": "Medium Trucks",
+          "Total ADT": 1612.8
+        },
+        {
+          "name": "Heavy Trucks",
+          "Total ADT": 1898.5
+        },
+        {
+          "name": "Truck Trailers 5ax",
+          "Total ADT": 1293.9
+        },
+        {
+          "name": "Truck Trailers 6ax",
+          "Total ADT": 5341.5
+        },
+        {
+          "name": "Truck Trailers 7ax",
+          "Total ADT": 320.6
+        }
+      ],
+      "nameKey": "name",
+      "dataKey": "Total ADT"
+    }
+  ]
+}

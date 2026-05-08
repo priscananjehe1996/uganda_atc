@@ -1,0 +1,46 @@
+{
+  "name": "traffic-prediction-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@deck.gl/aggregation-layers": "^9.3.1",
+    "@deck.gl/geo-layers": "^9.3.1",
+    "@deck.gl/layers": "^9.3.1",
+    "@deck.gl/react": "^9.3.1",
+    "@types/papaparse": "^5.5.2",
+    "deck.gl": "^9.3.1",
+    "lucide-react": "^1.9.0",
+    "maplibre-gl": "^5.24.0",
+    "motion": "^12.38.0",
+    "papaparse": "^5.5.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-map-gl": "^8.1.1",
+    "recharts": "^3.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.5.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.10",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
