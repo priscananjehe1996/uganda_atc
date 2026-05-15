@@ -26,13 +26,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    setData(roadLinksData); 
-    
-    // Safety auto-refresh exactly every 60 seconds (60000 ms) ensuring dashboard stays pristine and memory safe
-    const safeRefresh = setInterval(() => {
-      window.location.reload();
-    }, 60000);
-    return () => clearInterval(safeRefresh);
+    setData(roadLinksData);
   }, []);
 
   useEffect(() => {
