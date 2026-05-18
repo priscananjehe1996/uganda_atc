@@ -4,6 +4,7 @@ import { Activity, Cpu, Hexagon, Download, X, Globe, Layers, Crosshair, Zap, Rad
 import stationData from '../data/stations.json';
 import { motion, AnimatePresence } from 'motion/react';
 import html2canvas from 'html2canvas';
+import { formatFractionalYearToDate } from '../constants';
 
 const CYBER_COLORS = [
   '#00f0ff', '#ff003c', '#00ff66', '#fcee0a', '#b366ff', 
@@ -313,6 +314,13 @@ export default function InfographicsDashboard({ data, currentYear, onClose, deep
 
         const stns = stationData.features || [];
         const atcCount = stns.filter(s => s.properties.has_atc).length;
+        const activeCount = stns.filter(s => s.properties.status === 'Active').length;
+
+        const classCounts = ['A', 'B', 'C', 'M'].map((rc, i) => ({
+          name: `Class ${rc}`,
+          count: rawLinks.filter(l => l.road_class === rc).length,
+          fill: ['#00f0ff', '#ff003c', '#00ff66', '#fcee0a'][i]
+        }));
 
         return {
           totalVol,
@@ -320,13 +328,15 @@ export default function InfographicsDashboard({ data, currentYear, onClose, deep
           pavedRatio: (pavedCount / (rawLinks.length || 1)) * 100,
           atcRatio: (atcCount / (stns.length || 1)) * 100,
           stnCount: stns.length,
+          activeCount,
           linkCount: rawLinks.length,
           bandData: [
             { name: 'Fast <2k', count: bands.fast, fill: '#2ecc71' },
             { name: 'Warn 2k-8k', count: bands.yellow, fill: '#ffcc33' },
             { name: 'Delay 8k-15k', count: bands.red, fill: '#ff3333' },
             { name: 'Gridlock >15k', count: bands.darkRed, fill: '#8b0000' }
-          ]
+          ],
+          classCounts
         };
       })()
     };
@@ -519,7 +529,7 @@ export default function InfographicsDashboard({ data, currentYear, onClose, deep
               
               <CyberCard id="macro-sidebar-summary" title="National Traffic Prediction Summary" delay={0} accentColor="#ff3366" style={{ gridColumn: '1 / -1' }}>
                 <div style={{ padding: '8px' }}>
-                  <p style={{ margin: '0 0 20px', fontSize: '13px', color: '#8e92a4' }}>Multiparametric Network Diagnostics | Year: <strong style={{color:'#fff'}}>{new Date().toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</strong></p>
+                  <p style={{ margin: '0 0 20px', fontSize: '13px', color: '#8e92a4' }}>Multiparametric Network Diagnostics | Year: <strong style={{color:'#fff'}}>{formatFractionalYearToDate(currentYear)}</strong></p>
                   
                   <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginBottom: '32px' }}>
                     <div style={{ flex: 1, minWidth: '200px', background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
@@ -531,6 +541,16 @@ export default function InfographicsDashboard({ data, currentYear, onClose, deep
                       <div style={{ fontSize: '11px', color: '#8e92a4', textTransform: 'uppercase', letterSpacing: '1px' }}>Network Growth Ratio</div>
                       <div style={{ fontSize: '32px', fontWeight: '800', color: '#00ff66', margin: '8px 0' }}>+{analytics.sidebarMetrics.growthRatio}%</div>
                       <div style={{ fontSize: '11px', color: '#ff3366' }}>Since 2016 Base</div>
+                    </div>
+                    <div style={{ flex: 1, minWidth: '200px', background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                      <div style={{ fontSize: '11px', color: '#8e92a4', textTransform: 'uppercase', letterSpacing: '1px' }}>Active ATC Stations</div>
+                      <div style={{ fontSize: '32px', fontWeight: '800', color: '#00c3ff', margin: '8px 0' }}>{analytics.sidebarMetrics.activeCount}</div>
+                      <div style={{ fontSize: '11px', color: '#b366ff' }}><Radio size={11} style={{ display: 'inline', verticalAlign: 'middle' }} /> Automated Count Nodes</div>
+                    </div>
+                    <div style={{ flex: 1, minWidth: '200px', background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                      <div style={{ fontSize: '11px', color: '#8e92a4', textTransform: 'uppercase', letterSpacing: '1px' }}>Total Survey Nodes</div>
+                      <div style={{ fontSize: '32px', fontWeight: '800', color: '#fcee0a', margin: '8px 0' }}>{analytics.sidebarMetrics.linkCount}</div>
+                      <div style={{ fontSize: '11px', color: '#8e92a4' }}>Road Link Inventory</div>
                     </div>
                   </div>
 
@@ -598,6 +618,25 @@ export default function InfographicsDashboard({ data, currentYear, onClose, deep
                             <Bar isAnimationActive={false} dataKey="count" radius={[0, 4, 4, 0]}>
                               {analytics.sidebarMetrics.bandData.map((entry: any, index: number) => (
                                 <Cell key={`cell-${index}`} fill={entry.fill} />
+                              ))}
+                            </Bar>
+                          </BarChart>
+                        </ResponsiveContainer>
+                      </div>
+                    </div>
+
+                    <div style={{ gridColumn: '1 / -1' }}>
+                      <h4 style={{ fontSize: '12px', color: '#b366ff', marginBottom: '16px', textTransform: 'uppercase' }}>Class Node Spread — Road Links by Class (A / B / C / M)</h4>
+                      <div style={{ height: '160px' }}>
+                        <ResponsiveContainer width="100%" height="100%">
+                          <BarChart isAnimationActive={false} data={analytics.sidebarMetrics.classCounts} margin={{ top: 4, right: 20, left: 0, bottom: 0 }}>
+                            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
+                            <XAxis dataKey="name" fontSize={11} stroke="#8e92a4" tickLine={false} axisLine={false} />
+                            <YAxis fontSize={11} stroke="#8e92a4" tickLine={false} axisLine={false} tickFormatter={v => v.toLocaleString()} />
+                            <Tooltip content={<CustomTooltip />} />
+                            <Bar isAnimationActive={false} dataKey="count" name="Links" radius={[4, 4, 0, 0]}>
+                              {analytics.sidebarMetrics.classCounts.map((entry: any, index: number) => (
+                                <Cell key={`cls-${index}`} fill={entry.fill} />
                               ))}
                             </Bar>
                           </BarChart>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import MapComponent from './components/MapComponent';
-import Sidebar from './components/Sidebar';
 import LegendRightPanel from './components/LegendRightPanel';
 import RoadLinkDetails from './components/RoadLinkDetails';
 import StationDetailsPane from './components/StationDetailsPane';
@@ -188,8 +187,6 @@ export default function App() {
             onSelectStation={setSelectedStation}
           />
 
-          {!selectedLink && !selectedStation && <Sidebar data={data} currentYear={currentYear} />}
-          
           <LegendRightPanel filters={filters} setFilters={setFilters} mapMode={mapMode} setMapMode={setMapMode} />
           
           <RoadLinkDetails link={selectedLink} currentActualYear={currentActualYear} onClose={() => setSelectedLink(null)} />
