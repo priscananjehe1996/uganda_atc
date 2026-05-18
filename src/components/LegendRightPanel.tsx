@@ -9,27 +9,16 @@ export default function LegendRightPanel({ filters, setFilters, mapMode, setMapM
   return (
     <div className="sidebar-right">
       
-      {/* Map Mode Segment Control */}
+      {/* Map Mode Header */}
       <div className="seg-control" style={{ background: 'var(--bg-panel)', border: '1px solid var(--border-neon)' }}>
-        <button className={`seg-btn ${mapMode === 'Routes' ? 'active' : ''}`} onClick={() => setMapMode('Routes')}>
+        <button className="seg-btn active">
           <MapIcon size={16} /> Routes
-        </button>
-        <button className={`seg-btn ${mapMode === 'Heatmap' ? 'active' : ''}`} onClick={() => setMapMode('Heatmap')}>
-          <Hexagon size={16} /> Heatmap
         </button>
       </div>
 
       {/* Embedded Legend matching explicitly active Colour Mode */}
       {(() => {
-        if (filters.colorBy === 'Overload Risk') {
-          return (
-            <div className="filter-section" style={{ display: 'flex', border: 'none', padding: 0, overflow: 'hidden', borderRadius: '8px' }}>
-              <div style={{ flex: 1, textAlign: 'center', background: '#ff00ff', color: '#fff', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>High (&gt;25%)</div>
-              <div style={{ flex: 1, textAlign: 'center', background: '#ff69b4', color: '#fff', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>Med (&gt;15%)</div>
-              <div style={{ flex: 1, textAlign: 'center', background: '#00ffff', color: '#000', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>Low (&lt;15%)</div>
-            </div>
-          );
-        } else if (filters.colorBy === 'Surface Type') {
+        if (filters.colorBy === 'Surface Type') {
           return (
             <div className="filter-section" style={{ display: 'flex', border: 'none', padding: 0, overflow: 'hidden', borderRadius: '8px' }}>
               <div style={{ flex: 1, textAlign: 'center', background: '#4db6ac', color: '#fff', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>Paved</div>
@@ -42,12 +31,7 @@ export default function LegendRightPanel({ filters, setFilters, mapMode, setMapM
               <div style={{ flex: 1, textAlign: 'center', background: '#ff3366', color: '#fff', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>Class A</div>
               <div style={{ flex: 1, textAlign: 'center', background: '#00c3ff', color: '#fff', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>Class B</div>
               <div style={{ flex: 1, textAlign: 'center', background: '#00ea90', color: '#000', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>Class C</div>
-            </div>
-          );
-        } else if (filters.colorBy === 'Region') {
-          return (
-            <div className="filter-section" style={{ display: 'flex', border: 'none', padding: 0, overflow: 'hidden', borderRadius: '8px' }}>
-              <div style={{ flex: 1, textAlign: 'center', background: '#646464', color: '#fff', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>All Regions (Default)</div>
+              <div style={{ flex: 1, textAlign: 'center', background: '#ffcc00', color: '#000', fontSize: '11px', fontWeight: 'bold', padding: '10px 2px' }}>Class M</div>
             </div>
           );
         } else {
@@ -75,10 +59,9 @@ export default function LegendRightPanel({ filters, setFilters, mapMode, setMapM
             onChange={(e) => handleFilter('colorBy', e.target.value)}
             style={{ width: '100%', padding: '8px', background: 'rgba(255,255,255,0.05)', color: '#fff', border: '1px solid var(--border-neon)', borderRadius: '4px' }}
           >
-            <option value="Traffic Delay">Traffic Delay (Numeric AADT)</option>
-            <option value="Overload Risk">Overload Risk (HGV)</option>
-            <option value="Surface Type">Surface Type (Material)</option>
-            <option value="Road Class">Road Class (ABC)</option>
+            <option value="Traffic Delay" style={{ background: '#11151c', color: '#fff' }}>Traffic Delay (ADT)</option>
+            <option value="Surface Type" style={{ background: '#11151c', color: '#fff' }}>Surface Type (Material)</option>
+            <option value="Road Class" style={{ background: '#11151c', color: '#fff' }}>Road Class (ABC)</option>
           </select>
         </div>
 
@@ -90,7 +73,7 @@ export default function LegendRightPanel({ filters, setFilters, mapMode, setMapM
           <div className="filter-row-label">Surface</div>
           <div className="btn-group">
             <button className={`filter-btn ${filters.surface === 'All' ? 'active' : ''}`} onClick={() => handleFilter('surface', 'All')}>All</button>
-            <button className={`filter-btn ${filters.surface === 'Paved' ? 'active' : ''}`} onClick={() => handleFilter('surface', 'Paved')}>Paved</button>
+            <button className={`filter-btn ${filters.surface === 'Bituminous' ? 'active' : ''}`} onClick={() => handleFilter('surface', 'Bituminous')}>Paved</button>
             <button className={`filter-btn ${filters.surface === 'Unsealed' ? 'active' : ''}`} onClick={() => handleFilter('surface', 'Unsealed')}>Unsealed</button>
           </div>
         </div>
@@ -102,20 +85,8 @@ export default function LegendRightPanel({ filters, setFilters, mapMode, setMapM
             <button className={`filter-btn ${filters.class === 'A' ? 'active' : ''}`} onClick={() => handleFilter('class', 'A')}>A</button>
             <button className={`filter-btn ${filters.class === 'B' ? 'active' : ''}`} onClick={() => handleFilter('class', 'B')}>B</button>
             <button className={`filter-btn ${filters.class === 'C' ? 'active' : ''}`} onClick={() => handleFilter('class', 'C')}>C</button>
+            <button className={`filter-btn ${filters.class === 'M' ? 'active' : ''}`} onClick={() => handleFilter('class', 'M')}>M</button>
           </div>
-        </div>
-
-        <div className="filter-row">
-          <div className="filter-row-label">Region</div>
-          <select 
-            className="dropdown-select" 
-            value={filters.region} 
-            onChange={(e) => handleFilter('region', e.target.value)}
-          >
-            <option value="All Regions">All Regions</option>
-            <option value="Central">Central</option>
-            <option value="National">National</option>
-          </select>
         </div>
 
       </div>

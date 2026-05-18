@@ -252,3 +252,61 @@ body {
   cursor: pointer;
   outline: none;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .sidebar-left { width: 320px; }
+  .sidebar-right { width: 280px; }
+}
+
+@media (max-width: 900px) {
+  .sidebar-left, .sidebar-right { 
+    position: static; 
+    width: 100%; 
+    max-height: 40vh; 
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .app-container {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+  .map-container {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+  }
+  .time-panel-container {
+    width: 90%;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .play-panel-container {
+    left: 10px !important;
+    bottom: 10px !important;
+    width: calc(100% - 20px);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .panel-title { font-size: 20px; }
+  .stat-value { font-size: 24px; }
+  .time-panel-container .glass-panel {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 24px;
+  }
+  .time-panel-container h2 { font-size: 36px !important; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}

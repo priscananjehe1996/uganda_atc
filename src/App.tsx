@@ -3,18 +3,30 @@ import MapComponent from './components/MapComponent';
 import Sidebar from './components/Sidebar';
 import LegendRightPanel from './components/LegendRightPanel';
 import RoadLinkDetails from './components/RoadLinkDetails';
+import StationDetailsPane from './components/StationDetailsPane';
+import SummaryTables from './components/SummaryTables';
 import InfographicsDashboard from './components/InfographicsDashboard';
-import roadLinksData from './data/road_links.json';
-import { Play, Pause, Calendar, Droplets, TrafficCone, Layers, Compass, BarChart2 } from 'lucide-react';
+import TimePanel from './components/TimePanel';
+import { Play, Pause, Calendar, Droplets, TrafficCone, Layers, Compass, BarChart2, Activity } from 'lucide-react';
+import { formatFractionalYearToDate } from './constants';
 
 export default function App() {
   const [data, setData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
   
-  const currentActualYear = new Date().getFullYear(); // 2026 based on mock system date
-  const [currentYear, setCurrentYear] = useState(2016);
+  const getRealTimeYear = () => {
+    const n = new Date();
+    const startOfYear = new Date(n.getFullYear(), 0, 1).getTime();
+    const endOfYear = new Date(n.getFullYear() + 1, 0, 1).getTime();
+    return n.getFullYear() + (n.getTime() - startOfYear) / (endOfYear - startOfYear);
+  };
+  const currentActualYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(getRealTimeYear);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLiveMode, setIsLiveMode] = useState(true);
   const [selectedLink, setSelectedLink] = useState(null);
-  const [showInfographics, setShowInfographics] = useState(false);
+  const [selectedStation, setSelectedStation] = useState(null);
+  const [activeTab, setActiveTab] = useState('Map');
   
   const [mapMode, setMapMode] = useState('Routes'); // 'Routes' or 'Heatmap'
 
@@ -25,134 +37,195 @@ export default function App() {
     region: 'All Regions'
   });
 
+  const [deepAnalyticsData, setDeepAnalyticsData] = useState<any>(null);
+
   useEffect(() => {
-    setData(roadLinksData);
+    const loadData = async () => {
+      try {
+        const [linksRes, deepRes] = await Promise.all([
+          fetch(`${import.meta.env.BASE_URL}road_links.json`),
+          fetch(`${import.meta.env.BASE_URL}data/multidimensional_growth_summaries.json`)
+        ]);
+
+        if (!linksRes.ok) throw new Error(`Links Fetch Error: ${linksRes.status}`);
+        const linksJson = await linksRes.json();
+        setData(linksJson);
+
+        if (deepRes.ok) {
+          const deepJson = await deepRes.json();
+          setDeepAnalyticsData(deepJson);
+        }
+        
+        setIsLoading(false);
+      } catch (err) {
+        console.error("CRITICAL: Failed to load data", err);
+        setIsLoading(false);
+      }
+    };
+    loadData();
   }, []);
 
+
+  // Real-time clock sync: update every second when in live mode
   useEffect(() => {
     let interval: any;
     if (isPlaying) {
+      setIsLiveMode(false);
       interval = setInterval(() => {
         setCurrentYear(prev => {
-          if (prev >= currentActualYear) {
-            setIsPlaying(false);
-            return currentActualYear;
-          }
-          // Increment accurately but keep it smooth with decimal years, or just integer jumps
-          // Using increments of 1 year per second
-          return prev + 1;
+          if (prev >= 2035) return 2016;
+          return prev + (1/12);
         });
-      }, 1000); 
+      }, 500);
+    } else if (isLiveMode && activeTab === 'Map') {
+      interval = setInterval(() => {
+        setCurrentYear(getRealTimeYear());
+      }, 1000);
     }
     return () => clearInterval(interval);
-  }, [isPlaying, currentActualYear]);
+  }, [isPlaying, isLiveMode, activeTab]);
+
+  if (isLoading) {
+    return (
+      <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#0a0b10', color: '#fff' }}>
+        <Activity size={48} color="#00c3ff" style={{ marginBottom: '16px', animation: 'pulse 1.5s infinite' }} />
+        <h2 style={{ margin: '0 0 8px 0', fontSize: '24px', letterSpacing: '2px' }}>INITIALIZING ENGINE</h2>
+        <p style={{ color: '#8e92a4', margin: 0 }}>Loading National Network Data...</p>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#0a0b10', color: '#fff', padding: '20px', textAlign: 'center' }}>
+        <div style={{ color: '#ff3366', fontSize: '48px', marginBottom: '16px' }}>⚠</div>
+        <h2 style={{ margin: '0 0 8px 0', fontSize: '24px' }}>DATA LOAD FAILURE</h2>
+        <p style={{ color: '#8e92a4', maxWidth: '400px' }}>
+          Could not connect to the traffic analytics server. Please check your internet connection and refresh.
+        </p>
+        <button onClick={() => window.location.reload()} style={{ marginTop: '24px', padding: '12px 24px', background: '#ff3366', border: 'none', color: '#fff', borderRadius: '8px', cursor: 'pointer' }}>
+          Retry Initialization
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="app-container">
       
-      <MapComponent data={data} currentYear={currentYear} filters={filters} mapMode={mapMode} onSelectLink={setSelectedLink} />
-      
-      <Sidebar data={data} currentYear={currentYear} />
-      <LegendRightPanel filters={filters} setFilters={setFilters} mapMode={mapMode} setMapMode={setMapMode} />
-      
-      <RoadLinkDetails link={selectedLink} currentActualYear={currentActualYear} onClose={() => setSelectedLink(null)} />
-      
-      {showInfographics && <InfographicsDashboard onClose={() => setShowInfographics(false)} />}
-      
-      {/* Top Left Deep Analytics Button */}
-      <button 
-        onClick={() => setShowInfographics(true)}
-        style={{
-          position: 'absolute',
-          top: 32,
-          left: 450,
-          zIndex: 10,
-          background: 'rgba(0, 195, 255, 0.1)',
-          border: '1px solid #00c3ff',
-          color: '#00c3ff',
-          padding: '12px 24px',
-          borderRadius: '24px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          cursor: 'pointer',
-          fontWeight: 'bold',
-          backdropFilter: 'blur(4px)',
-          boxShadow: '0 4px 12px rgba(0, 195, 255, 0.2)'
-        }}
-      >
-        <BarChart2 size={20} /> Deep Class Analytics (20+ Charts)
-      </button>
-
-      {/* Timeseries Play Panel */}
-      <div className="glass-panel" style={{
+      {/* Horizontal Navigation Pane */}
+      <div style={{
         position: 'absolute',
-        bottom: 32,
+        top: 20,
         left: '50%',
         transform: 'translateX(-50%)',
-        padding: '16px 32px',
+        background: 'rgba(10, 15, 30, 0.7)',
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(0, 195, 255, 0.3)',
+        borderRadius: '24px',
         display: 'flex',
-        alignItems: 'center',
-        gap: '24px',
-        zIndex: 10,
-        borderRadius: '32px',
-        border: '1px solid var(--border-neon)'
+        padding: '4px',
+        zIndex: 100,
+        boxShadow: '0 4px 16px rgba(0,0,0,0.3)'
       }}>
-        <button 
-          onClick={() => {
-            if (!isPlaying) {
-              if (currentYear >= currentActualYear) {
-                setCurrentYear(2016);
-              }
-              setIsPlaying(true);
-            } else {
-              setIsPlaying(false);
-            }
-          }}
+        <button
+          onClick={() => setActiveTab('Map')}
           style={{
-            background: 'var(--accent-red)',
+            background: activeTab === 'Map' ? 'rgba(0,195,255,0.2)' : 'transparent',
+            color: activeTab === 'Map' ? '#00c3ff' : '#8e92a4',
             border: 'none',
-            borderRadius: '50%',
-            width: '48px',
-            height: '48px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            padding: '8px 24px',
+            borderRadius: '20px',
             cursor: 'pointer',
-            color: 'white',
-            boxShadow: '0 4px 12px rgba(255, 51, 102, 0.4)'
+            fontWeight: 'bold',
+            transition: 'all 0.3s ease'
           }}
         >
-          {isPlaying ? <Pause fill="white" /> : <Play fill="white" />}
+          Geospatial Map
         </button>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', minWidth: '400px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', fontWeight: 'bold' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Calendar size={16} color="var(--accent-teal)" />
-              National Network Timeline
-            </span>
-            <span style={{ color: 'var(--accent-red)', fontSize: '18px', fontVariantNumeric: 'tabular-nums' }}>
-              {currentYear}
-            </span>
-          </div>
-          <input 
-            type="range" 
-            min={2016} 
-            max={currentActualYear} 
-            value={currentYear} 
-            onChange={(e) => {
-              setCurrentYear(Number(e.target.value));
-              setIsPlaying(false);
-            }}
-            style={{ width: '100%', accentColor: 'var(--accent-red)', cursor: 'pointer' }}
-          />
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: 'var(--text-muted)' }}>
-            <span>2016</span>
-            <span>{currentActualYear} (Now)</span>
-          </div>
-        </div>
+        <button
+          onClick={() => setActiveTab('Tables')}
+          style={{
+            background: activeTab === 'Tables' ? 'rgba(0,195,255,0.2)' : 'transparent',
+            color: activeTab === 'Tables' ? '#00c3ff' : '#8e92a4',
+            border: 'none',
+            padding: '8px 24px',
+            borderRadius: '20px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          Summary Tables
+        </button>
+        <button
+          onClick={() => setActiveTab('Analytics')}
+          style={{
+            background: activeTab === 'Analytics' ? 'rgba(0,195,255,0.2)' : 'transparent',
+            color: activeTab === 'Analytics' ? '#00c3ff' : '#8e92a4',
+            border: 'none',
+            padding: '8px 24px',
+            borderRadius: '20px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            transition: 'all 0.3s ease'
+          }}
+        >
+          Deep Analytics
+        </button>
       </div>
+
+      {activeTab === 'Map' && (
+        <>
+          <MapComponent 
+            data={data} 
+            currentYear={currentYear} 
+            filters={filters} 
+            mapMode={mapMode} 
+            selectedLink={selectedLink}
+            selectedStation={selectedStation}
+            onSelectLink={setSelectedLink} 
+            onSelectStation={setSelectedStation}
+          />
+
+          {!selectedLink && !selectedStation && <Sidebar data={data} currentYear={currentYear} />}
+          
+          <LegendRightPanel filters={filters} setFilters={setFilters} mapMode={mapMode} setMapMode={setMapMode} />
+          
+          <RoadLinkDetails link={selectedLink} currentActualYear={currentActualYear} onClose={() => setSelectedLink(null)} />
+          <StationDetailsPane station={selectedStation} onClose={() => setSelectedStation(null)} />
+
+          {/* Timeseries Play Panel */}
+          <div className="play-panel-container" style={{ position: 'absolute', bottom: '32px', right: '24px', zIndex: 1000, display: 'flex', gap: '20px', alignItems: 'flex-end' }}>
+             <button 
+              onClick={() => setIsPlaying(!isPlaying)}
+              style={{
+                background: 'rgba(255, 51, 102, 0.95)',
+                border: 'none',
+                borderRadius: '50%',
+                width: '64px',
+                height: '64px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                color: 'white',
+                boxShadow: '0 8px 32px rgba(255, 51, 102, 0.5)',
+                backdropFilter: 'blur(10px)',
+                zIndex: 1001,
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+              }}
+            >
+              {isPlaying ? <Pause fill="white" size={32} /> : <Play fill="white" size={32} />}
+            </button>
+            <TimePanel currentYear={currentYear} setCurrentYear={setCurrentYear} isLiveMode={isLiveMode} setIsLiveMode={setIsLiveMode} />
+          </div>
+        </>
+      )}
+
+      {activeTab === 'Tables' && <SummaryTables data={data} />}
+      
+      {activeTab === 'Analytics' && <InfographicsDashboard onClose={() => setActiveTab('Map')} data={data} currentYear={currentYear} deepAnalyticsData={deepAnalyticsData} />}
     </div>
   );
 }

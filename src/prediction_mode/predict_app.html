@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Prediction Mode Sandbox</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="prediction-overlay">
+        <!-- Overlay container for prediction sandbox UI -->
+    </div>
+    
+    <div style="padding: 40px; display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div class="pred-panel pred-active" style="width: 450px;">
+            <h2 class="pred-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                Prediction Engine Live
+            </h2>
+            
+            <p style="color: #8b9bb4; line-height: 1.6; font-size: 0.95rem;">
+                This sandbox environment runs pure JavaScript Web Worker bridges to interface with the Python ML models for real-time traffic projection.
+            </p>
+            
+            <div style="margin-top: 30px;">
+                <div class="pred-stat-row">
+                    <span class="pred-stat-label">Model Confidence</span>
+                    <span class="pred-stat-value" style="color: var(--pred-primary)">94.2%</span>
+                </div>
+                <div class="pred-stat-row">
+                    <span class="pred-stat-label">Target Horizon</span>
+                    <span class="pred-stat-value">2035 Projection</span>
+                </div>
+                <div class="pred-stat-row">
+                    <span class="pred-stat-label">Active Nodes</span>
+                    <span class="pred-stat-value" id="node-count">Processing...</span>
+                </div>
+            </div>
+            
+            <button id="run-sim-btn" style="margin-top: 24px; width: 100%; padding: 12px; background: rgba(0,234,144,0.1); border: 1px solid var(--pred-primary); color: var(--pred-primary); border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1rem; transition: all 0.3s;">
+                Run Simulation
+            </button>
+        </div>
+    </div>
+
+    <script src="./ml_bridge.js" type="module"></script>
+</body>
+</html>
