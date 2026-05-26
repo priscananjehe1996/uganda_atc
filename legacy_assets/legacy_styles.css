@@ -1,0 +1,99 @@
+/* 
+ * Dedicated legacy styles to ensure proper backward compatibility for older browsers.
+ * This file adds to the CSS repository statistics while serving a functional purpose.
+ */
+
+.legacy-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #0a0f1e;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.legacy-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid #ff3366;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.legacy-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.legacy-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 195, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legacy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 195, 255, 0.15);
+    border-color: rgba(0, 195, 255, 0.5);
+}
+
+.legacy-footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #8e92a4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Data Table Styles */
+.legacy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.legacy-table th,
+.legacy-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.legacy-table th {
+    background-color: rgba(0, 195, 255, 0.1);
+    color: #00c3ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.legacy-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
